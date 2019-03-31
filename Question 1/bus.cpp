@@ -239,11 +239,10 @@ uint* getBusList() {
 //checking if the license plate exists in buses and returning the address on the bus
 Bus* getBus(int busId) {
 	if (!checkBus(busId))
-		return nullptr;
+		throw numberToString(busId);
 	for (uint i = 0; i < busFleetCount; i++)
 		if (buses[i]->_busId == busId)
 			return buses[i];
-	return nullptr;
 }
 
 

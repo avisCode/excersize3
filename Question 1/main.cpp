@@ -135,7 +135,8 @@ int main(void) {
 		case ASSIGN_LINE_TO_BUS:
 			cout << "enter bus licens plate : ";
 			cin >> busId;
-			if (getBus(busId) != nullptr) {
+			try {
+				getBus(busId);
 				cout << "enter the line: ";
 				cin >> lineNum;
 				try {
@@ -153,14 +154,18 @@ int main(void) {
 						cout << "line number is illegal\n";
 				}
 			}
-			else
-				cout << "bus doesn't exist\n";
+			catch (char *id) {
+				cout << "bus " << id << " doesn't exist\n";
+			}
 			break;
 		case REMOVE_LINE_FROM_BUS:
 			cout << "enter bus licens plate : ";
 			cin >> busId;
-			if (getBus(busId) != nullptr && getBus(busId)->_busLine != 0) {
+			try {
+				getBus(busId);
 				try {
+					if (!getBus(busId)->_busLine)
+						throw getBus(busId)->_busLine;
 					busLine(*getBus(busId));
 					cout << "teh bus was removed from the line Successfully\n";
 					busPrint(*getBus(busId));
@@ -168,29 +173,39 @@ int main(void) {
 				catch (char * id) {
 					cout << "The bus does not exist in line number: " << id << endl;
 				}
+				catch (uint line) {
+					cout << "ERROR cannot remove a bus with line: " << line << endl;
+				}
 			}
-			else
-				cout << "ERROR cannot remove a bus that does not exist or without a line number \n";
-
+			catch (char *id) {
+				cout << "bus " << id << " doesn't exist\n";
+			}
 			break;
 		case REMOVE_BUS:
 			cout << "enter bus licens plate : ";
 			cin >> busId;
 			try {
-				delBus(busId);
-				cout << "the bus was removed Successfully\n";
+				getBus(busId);
+				try {
+					delBus(busId);
+					cout << "the bus was removed Successfully\n";
+				}
+				catch (char *id) {
+					cout << "ERROR cannot remove a bus without a line number \n";
+				}
+				catch (int i) {
+					cout << "failed to delete the bus " << busId << " from the line: " << i << endl;
+				}
 			}
 			catch (char *id) {
-				cout << "ERROR cannot remove a bus that does not exist or without a line number \n";
-			}
-			catch (int i) {
-				cout << "failed to delete the bus " << busId << " from the line: " << i << endl;
+				cout << "bus " << id << " doesn't exist\n";
 			}
 			break;
 		case ADD_NAME_TO_BUS: {
 			cout << "bus license plate: ";
 			cin >> busId;
-			if (getBus(busId) != nullptr) {
+			try {
+				getBus(busId);
 				cout << "enter drivers name: ";
 				cstring nameDriver = new char[80];
 				cin.getline(nameDriver, 80);
@@ -209,17 +224,21 @@ int main(void) {
 					}
 				}
 			}
-			else
-				cout << "bus doesn't exist\n";
+			catch (char *id) {
+				cout << "bus " << id << " doesn't exist\n";
+			}
 			break;
 		}
 		case SHOW_BUS_LINE:
 			cout << "enter bus licens plate : ";
 			cin >> busId;
-			if (getBus(busId) != nullptr)
+			try {
+				getBus(busId);
 				cout << "the line of the bus is: " << getBus(busId)->_busLine << endl;
-			else
-				cout << "bus doesn't exist\n";
+			}
+			catch (char *id) {
+				cout << "bus " << id << " doesn't exist\n";
+			}
 			break;
 		case SHOW_LINE:
 			cout << "enter the line number: ";
@@ -261,10 +280,10 @@ int main(void) {
 		default:
 			cout << "ERORR\n";
 			break;
-			}
-		} while (chosen != EXIT_MENU);
+		}
+	} while (chosen != EXIT_MENU);
 
-		// Do not forget here to request destroying all the data and freeing all the memory
-		system("pause");
-		return 0;
-	}
+	// Do not forget here to request destroying all the data and freeing all the memory
+	system("pause");
+	return 0;
+}

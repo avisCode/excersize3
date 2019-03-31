@@ -35,7 +35,7 @@ void lineAddBus(uint line, uint busId) {
 
 //deleting a bus from a line (handling case of deleting the last line in the array it should not be a dangling pointer)
 void lineDelBus(uint line, uint busId) {
-	if (!lineArr[line - 1].numOfBus)
+	if  (!lineArr[line - 1].numOfBus)
 		throw numberToString(busId);
 	bool flag = false;
 	uint i;
