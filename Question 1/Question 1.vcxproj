@@ -124,6 +124,7 @@
     <ClInclude Include="bus.h" />
     <ClInclude Include="line.h" />
     <ClInclude Include="mytypes.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

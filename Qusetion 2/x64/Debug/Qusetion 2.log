@@ -1,0 +1,13 @@
+﻿  common.cpp
+  Complex.cpp
+  main.cpp
+  menu.cpp
+  Rational.cpp
+  Compiling...
+  Generating Code...
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\qusetion 2\complex.cpp(24): warning C4172: returning address of local variable or temporary: tempComplex
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\qusetion 2\complex.cpp(16): warning C4172: returning address of local variable or temporary: tempComplex
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\qusetion 2\main.cpp(362): warning C4715: '<lambda_232a305b7e71c87229fb0738fe345b8e>::operator()': not all control paths return a value
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\qusetion 2\main.cpp(371): warning C4715: '<lambda_b22fbc4b861b7ba52eccc138f78d71dc>::operator()': not all control paths return a value
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\qusetion 2\rational.cpp(23): warning C4172: returning address of local variable or temporary: tempRational
+  Qusetion 2.vcxproj -> C:\Users\Avi Rosenberg\Desktop\לימודים\סמסטר ב\סדנא C++\excersizes\excersize 3\cpp5776_03_9653_3460\x64\Debug\Qusetion 2.exe

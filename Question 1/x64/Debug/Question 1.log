@@ -1,3 +1,14 @@
-﻿  main.cpp
+﻿  bus.cpp
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\bus.cpp(100): warning C4101: 'id': unreferenced local variable
+  line.cpp
+  main.cpp
 c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\main.cpp(193): warning C4101: 'id': unreferenced local variable
+  mytypes.cpp
+  Compiling...
+  Generating Code...
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\bus.cpp(63): warning C4715: 'busCtor': not all control paths return a value
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\bus.cpp(246): warning C4715: 'getBus': not all control paths return a value
   Question 1.vcxproj -> C:\Users\Avi Rosenberg\Desktop\לימודים\סמסטר ב\סדנא C++\excersizes\excersize 3\cpp5776_03_9653_3460\x64\Debug\Question 1.exe
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\bus.cpp(70): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\line.h(29): warning C26495: Variable 'Line::licensePlats' is uninitialized. Always initialize a member variable (type.6).
+c:\users\avi rosenberg\desktop\לימודים\סמסטר ב\סדנא c++\excersizes\excersize 3\cpp5776_03_9653_3460\question 1\line.cpp(18): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
